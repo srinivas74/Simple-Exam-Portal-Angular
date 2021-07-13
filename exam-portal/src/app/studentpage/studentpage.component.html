@@ -1,0 +1,52 @@
+
+<app-homepage></app-homepage>
+<div class="page-header">
+  <h2>Its a 10 marks exam .Attempt all questions to finish exam</h2>
+</div>
+
+
+
+
+  <div class="container" *ngIf="!scorevisible">
+    <h2>Questions</h2>
+    <div class="panel-group" *ngFor="let q of scriptobject;let i=index">
+  
+      <div class="panel panel-primary">
+        <div class="panel-heading" ><button type="button" class="btn btn-success" style="margin-right: 20px;">{{i+1}}</button>{{q.question}}</div>
+        
+        <div class="panel-body"><textarea class="name form-control" name="answer"  rows="1" id="comment" ></textarea></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container" id="submitquestions" (click)="onSubmitAnswer()" *ngIf="!scorevisible">
+    <button type="button" class="btn btn-success" >Submit Question paper</button>
+</div>
+
+
+<div class="container" *ngIf="displayattempts">
+  <h2>Questions and Answers you have attempted</h2>           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of all">
+        <td>{{x.question}}</td>
+        <td>{{x.answer}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<div class="container" *ngIf="scorevisible">
+  <div class="well" style="background-color: #5cb85c;color:  #fff;border-color: #4cae4c;box-shadow: 10px 10px 5px #aaaaaa;">You have scored  {{score}}</div>
+</div>
+

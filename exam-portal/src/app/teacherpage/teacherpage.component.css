@@ -1,0 +1,12 @@
+button{
+    margin: 13px 12px 12px 10px;
+}
+.deletebutton button{
+    margin: 0;
+}
+#submitquestions{    
+position: relative;
+left: 50%;
+transform: translatex(-50%);
+
+}

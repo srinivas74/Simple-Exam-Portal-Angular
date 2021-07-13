@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+     
+      <div class="navbar-header " >
+        <a class="navbar-brand ">ONLINE EXAMINATION PORTAL</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right" *ngIf="logout">
+        <li><a routerLink="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a routerLink="/login"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" *ngIf="!logout">
+        <li><a routerLink="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a routerLink="/home" (click)="onLogout()"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+  

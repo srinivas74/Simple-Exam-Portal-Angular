@@ -1,0 +1,19 @@
+<app-homepage></app-homepage>
+<h2>{{outputdecorator}}</h2>
+<div class="parent">
+    <div class="child">
+    <form (ngSubmit)="check()">
+        <table>
+            <tr><td><label>Username</label></td><td><input type="text" name="username" class="username" [(ngModel)]="username"></td></tr>
+            <tr><td><label>Password</label></td><td><input type="password" name="password" class="password" [(ngModel)]="password"></td></tr>
+            <tr><td colspan="2" align="center"><input type="submit" name="submit" value="submit" class="submit" [disabled]="(username==='') || (password==='')"></td></tr>
+        </table>
+    </form>
+    </div>
+</div>
+
+<h3 class="status">{{statusforlogincredentials}}</h3>
+
+<footer class="container-fluid bg-4 text-center" style="color: white;">
+    <h3> Support us!! www.exam.com</h3>
+  </footer>

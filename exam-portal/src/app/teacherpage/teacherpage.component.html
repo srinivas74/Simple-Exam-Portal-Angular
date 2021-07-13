@@ -1,0 +1,58 @@
+<app-homepage></app-homepage>
+<div class="jumbotron">
+  <h1>Create a Question paper</h1>
+</div>
+<form (ngSubmit)="addquestion()" *ngIf="!submitquestions">
+    <div class="form-group">
+      <label for="question">Question</label>
+      <input type="text" class="form-control" id="question" name="question" [(ngModel)]="question" placeholder="Type question here">
+    </div>
+    <div class="form-group">
+      <label for="answer">Answer</label>
+      <input type="text" class="form-control" id="answer" name="answer" [(ngModel)]="answer" placeholder="Type answer here">
+    </div>
+    <div class="container">
+        <button type="submit" class="btn btn-success" [disabled]="(question==='') || (answer==='')">Submit</button>
+        <button type="button" class="btn btn-danger" (click)="onDisplay()">Display All Questions</button>
+        <button type="button" class="btn btn-danger" (click)="onClear()">Clear All Questions</button>
+      </div>
+    
+  </form>
+
+
+
+
+  <div class="container" *ngIf="displayquestions">
+    <h2>Questions and Answers </h2>           
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Answer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let q of scriptobject">
+          <td>{{q.question}}</td>
+          <td>{{q.answer}}</td>
+          <td class="deletebutton"><button type="button" class="btn btn-danger" *ngIf="!submitquestions" (click)="onDelete(q.question)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<div class="container" id="submitquestions" *ngIf="submitted" (click)="onSubmitPaper()">
+        <button type="button" class="btn btn-success">Submit Question paper</button>
+</div>
+
+<div class="container" *ngIf="submitquestions">   
+  <div class="alert alert-success">  
+    <strong>Success!</strong> Question paper submitted  
+  </div>  
+  </div>
+
+
+  <div class="container" *ngIf="checkreview">
+    <div class="well">You have a review by head--------{{review}}--------</div>
+  </div>
+
+  

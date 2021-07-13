@@ -1,0 +1,72 @@
+/*.header{
+    margin: 0;
+    padding:0;
+    background-color: darkslategray;
+    overflow: hidden;
+}
+.header .title{
+    float: left;
+    font: 16px;
+    font-style: inherit;
+    color: white;
+    padding: 14px 16px;
+    margin-left: 35%;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.sub-header a{
+    float: right;
+    font: 16px;
+    font-style: inherit;
+    color: white;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.sub-header button{
+    float: right;
+    font: 16px;
+    font-style: inherit;
+    color: white;
+    font-weight: bold;
+    background-color: darkslategray;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.sub-header .login{
+    background-color: green;
+}
+
+.welcome{
+    color: black;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-style: inherit;
+}*/
+
+
+.navbar-header{
+
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.navbar-default{
+    background-color: darkslategray;
+}
+.navbar-default .navbar-brand{
+    color: white;
+
+}
+
+.navbar-right a{
+    color: white;
+    margin-right: 50px;
+}
+.glyphicon-user{
+    color: white;
+
+}
+
+
